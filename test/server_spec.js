@@ -318,7 +318,6 @@ describe('Server', function() {
         request(saveOptions, function (err, res, body) {
           request(options, function (err, res, body) {
             request(checkOptions, function(err, res, body) {
-              console.log(body.suggestions)
               expect(body.suggestions).to.be.empty;
               done();
             })
