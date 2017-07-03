@@ -26,10 +26,8 @@
     "mongodb": "^2.2.29",
     "mongoose": "^4.10.8",
     "react": "^15.6.1",
-    "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
     "react-slick": "^0.14.11",
-    "redux": "^3.7.0",
     "request": "^2.81.0",
     "semantic-ui": "^2.2.10",
     "slick-carousel": "^1.6.0"
@@ -48,6 +46,7 @@
     "file-loader": "^0.11.2",
     "gulp": "^3.9.1",
     "istanbul": "^0.4.5",
+    "gulp": "^3.9.1",
     "mocha": "^3.4.2",
     "nodemon": "^1.11.0",
     "react-dom": "^15.6.1",

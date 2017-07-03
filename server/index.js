@@ -23,7 +23,7 @@ app.post('/login', function(req, res) {
     if (err) { return err; }
 
     if (person === null) {
-      request('https://graph.facebook.com/' + userID + '?fields=name,picture&access_token=' + token, function(err, response, body) {
+      request('https://graph.facebook.com/' + userID + '?fields=name, picture.width(500)&access_token=' + token, function(err, response, body) {
         body = JSON.parse(body);
         var user = new User({ 'id': userID, 'photoUrl': body.picture.data.url, 'name': body.name });
         user.save(function(err, saved) {
@@ -164,7 +164,7 @@ app.put('/suggestions', function(req, res) {
     });
     person.suggestions.splice(removeIndex, 1);
     person.save(function(err, updated) {
-      res.send(updated);
+      res.send(updated.suggestions);
     });
   });
 });
